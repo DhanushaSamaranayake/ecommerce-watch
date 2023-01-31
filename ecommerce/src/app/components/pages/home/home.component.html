@@ -1,0 +1,41 @@
+<div class="slider-container">
+  <div class="slider">
+  </div>
+</div>
+
+
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found [visible]="!watches || !watches.length"
+resetLinkText="Reset Search"></app-not-found>
+<div>
+  <h1 style="margin-left: 5rem;">Watches</h1>
+<ul class="bgimg">
+  <li *ngFor="let watch of watches">
+    <a  class="slide-in-fwd-center" style="box-shadow: 10px 10px 20px #888888;"  routerLink="/watch/{{watch.id}}">
+      <img   style="height: 300px; padding: 10%;" [src]="watch.imageUrl" [alt]="watch.name" />
+      <div style="margin-top: -60px;" class="content">
+        <div class="name">
+          {{watch.name}}
+        </div>
+        <span class="favorite {{watch.favorite?'':'not'}}">
+          ❤
+        </span>
+        <div class="product-item-footer">
+          <div class="origins">
+            <span *ngFor="let origin of watch.origins">
+              {{origin}}
+            </span>
+          </div>
+        </div>
+
+        <div class="price">
+          <span>
+            {{watch.price | currency}}
+          </span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
+

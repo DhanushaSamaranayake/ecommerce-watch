@@ -1,0 +1,10 @@
+{
+    "name": "ecommerce-watch",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "cd servers/built && node server.js",
+        "prebuild": "cd servers && npm run build",
+        "build": "cd ecommerce && npm run build"
+        
+    }
+}

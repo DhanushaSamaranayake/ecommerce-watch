@@ -1,0 +1,38 @@
+<app-not-found [visible]="!watch" notFoundMessage="Watches Not Found" resetLinkText="Back to HomePage"
+></app-not-found>
+<div *ngIf="watch" class="container">
+  <img class="slide-in-elliptic-top-fwd" [src]="watch.imageUrl" [alt]="watch.name"/>
+
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        {{watch.name}}
+      </span>
+
+    </div>
+
+    <div class="origins">
+      <span style="box-shadow: 10px 10px 20px #888888;" *ngFor="let origin of watch.origins">
+        {{origin}}
+      </span>
+    </div>
+
+    <div class="tags">
+      <a style="box-shadow: 10px 10px 20px #888888;" *ngFor="let tag of watch.tags" routerLink="/tag/{{tag}}">
+        {{tag}}
+      </a>
+    </div>
+    <div class="price">
+      <span>
+        {{watch.price | currency}}
+      </span>
+    </div>
+
+    <button class="shake-right" (click)="addToCart()">Add To Cart</button>
+
+  </div>
+</div>
+<div class="watermark">
+  <img [src]="watch.imageUrl"/>
+</div>
+

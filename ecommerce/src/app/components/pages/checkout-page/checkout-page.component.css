@@ -1,0 +1,80 @@
+.container{
+  margin-top: 1rem;
+  margin: 0 2rem 6rem 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 37%;
+  -webkit-animation: slide-right 2s ease-in both;
+  animation: slide-right 2s ease-in both;
+  margin-left: 27rem;
+}
+
+.content{
+  width: 35rem;
+  margin-right: 3rem;
+}
+
+.content,form{
+  display: flex;
+  flex-direction: column;
+}
+.mapp{
+  width: 80%;
+}
+form{
+  width: 100%;
+}
+
+.buttons-container{
+  flex-basis: 100%;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.buttons{
+  margin: 2rem;
+  width: 35rem;
+}
+
+button{
+  color: white;
+  background-color: #c9a13a;
+  width: 40%;
+  height: 3rem;
+  opacity: 0.8;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 10px 10px 20px  grey;
+}
+
+button:hover{
+  opacity: 1;
+  cursor: pointer;
+  background-color: #ae841ad3;
+}
+
+
+
+
+
+ @-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}

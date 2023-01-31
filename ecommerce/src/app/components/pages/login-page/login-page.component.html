@@ -1,0 +1,40 @@
+<!--<div class="container">
+  <div class="details">
+    <app-title title="Login"></app-title>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+      <app-text-input [control]="formControls.email" [errors]="isSubmitted" type="email" label="Email">
+      </app-text-input>
+
+      <app-text-input [control]="formControls.password" [errors]="isSubmitted" type="password" label="Password">
+      </app-text-input>
+
+      <def-button text="Login">
+      </def-button>
+
+      <div class="register">
+        New user? &nbsp;
+        <a routerLink="/register" [queryParams]=""> Register here </a>
+      </div>
+    </form>
+  </div>
+</div>-->
+<div class="container">
+<div class="slide-top">
+<div class="login-page">
+  <div class="form">
+     <app-title title="Login"></app-title>
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+      <app-text-input [control]="formControls.email" [errors]="isSubmitted" type="email" label="Email">
+      </app-text-input>
+      <app-text-input style="margin-top: 10%;margin-left: 10rem;" [control]="formControls.password" [errors]="isSubmitted" type="password" label="Password">
+      </app-text-input>
+      <def-button style="background-color: #4caf50;" text="Login">
+      </def-button>
+      <p class="message">Not registered?&nbsp;<a routerLink="/register" [queryParams]=""> Register here </a></p>
+    </form>
+  </div>
+</div>
+</div>
+</div>

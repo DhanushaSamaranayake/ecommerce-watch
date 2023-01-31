@@ -1,0 +1,6 @@
+<div  *ngIf="tags">
+  <a class="slide-in-left" style="box-shadow: 8px 8px 20px #888888;"  *ngFor="let tag of tags" routerLink="/tag/{{tag.name}}">
+    {{tag.name}}({{tag.count}})
+  </a>
+</div>
+

@@ -1,0 +1,54 @@
+
+<!--<div class="container">
+  <div class="details">
+    <app-title title="Register"></app-title>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <app-text-input [control]="formControls.name" [errors]="isSubmitted" type="text" label="Name">
+      </app-text-input>
+      <app-text-input [control]="formControls.email" [errors]="isSubmitted" type="email" label="Email">
+      </app-text-input>
+      <app-text-input [control]="formControls.password" [errors]="isSubmitted" type="password" label="Password">
+      </app-text-input>
+      <app-text-input [control]="formControls.confirmPassword" [errors]="isSubmitted" type="password" label="Confirm Password">
+      </app-text-input>
+      <app-text-input [control]="formControls.address" [errors]="isSubmitted" type="text" label="Adress">
+      </app-text-input>
+      <def-button text="Register">
+      </def-button>
+
+<div class="login">
+  Already a user? &nbsp;
+  <a routerLink="/login" [queryParams]="{returnUrl: returnUrl}">
+    Login Here
+  </a>
+</div>
+
+
+    </form>
+  </div>
+</div>-->
+<div class="container">
+
+<div class="login-page">
+  <div class="form">
+     <app-title title="Register"></app-title>
+    <form class="login-form" [formGroup]="registerForm" (ngSubmit)="register()">
+      <app-text-input [control]="formControls.name" [errors]="isSubmitted" type="text" label="Name">
+      </app-text-input>
+      <app-text-input [control]="formControls.email" [errors]="isSubmitted" type="email" label="Email">
+      </app-text-input>
+      <app-text-input [control]="formControls.password" [errors]="isSubmitted" type="password" label="Password">
+      </app-text-input>
+      <app-text-input [control]="formControls.confirmPassword" [errors]="isSubmitted" type="password" label="Confirm Password">
+      </app-text-input>
+      <app-text-input [control]="formControls.address" [errors]="isSubmitted" type="text" label="Adress">
+      </app-text-input>
+      <def-button text="Register">
+      </def-button>
+      <p class="message">  Already a user? &nbsp;<a routerLink="/login" [queryParams]="{returnUrl: returnUrl}">
+        Login Here
+      </a></p>
+    </form>
+  </div>
+</div>
+</div>
